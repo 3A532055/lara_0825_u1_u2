@@ -27,7 +27,8 @@ class AddIsFeatureInPostTable extends Migration
     public function down()
     {
         Schema::table('posts', function (Blueprint $table) {
-            //
+            $table ->string('title') ->change();
+            $table ->dropColumn('is_feature') ;
         });
     }
 }
