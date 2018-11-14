@@ -34,12 +34,16 @@ Route::get('/', function () {
     //$posts =\App\Post::where('id','<',10)->orderBy('id','DESC')->get();
     //dd($posts);   //條件式
 
-    $post=\App\Post::find(1);     //update方法
-    $post->update([
-        'title'=>'updated title',
-        'content'=>'updated content',
-    ]);
+    //$post=\App\Post::find(1);     //update方法
+    //$post->update([
+    //    'title'=>'updated title',
+    //    'content'=>'updated content',
+    //]);
 
+    $post=\App\Post::find(2);
+    $post->title='saved title';
+    $post->content='saved content';
+    $post->save();
 
 
 });
