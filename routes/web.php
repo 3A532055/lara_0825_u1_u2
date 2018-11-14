@@ -50,6 +50,13 @@ Route::get('/', function () {
 
     //\App\Post::destroy(4);     //destroy方法
 
-    \App\Post::destroy(1,6,8);         //刪除多筆資料
+    //\App\Post::destroy(1,6,8);         //刪除多筆資料
+
+    $allPosts=\App\Post::all();    // 取得Collection
+    dd($allPosts);
+    $featuredPosts=\App\Post::where('is_feature',1)->get();
+    dd($featuredPosts);
+
+
 
 });
