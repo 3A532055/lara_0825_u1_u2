@@ -48,7 +48,8 @@ Route::get('/', function () {
     //$post =\App\Post::find(3);        //delete方法
     //$post ->delete();
 
-    \App\Post::destroy(4);     //destroy方法
+    //\App\Post::destroy(4);     //destroy方法
 
+    \App\Post::destroy(1,6,8);         //刪除多筆資料
 
 });
