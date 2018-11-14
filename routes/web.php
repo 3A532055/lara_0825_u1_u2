@@ -28,7 +28,10 @@ Route::get('/', function () {
     //$posts = \App\Post::all();  //all方法
     //dd($posts);
 
-    $post=\App\Post::find(1);
-    dd($post);
+    //$post=\App\Post::find(1);   //find方法
+    //dd($post);
+
+    $posts =\App\Post::where('id','<',10)->orderBy('id','DESC')->get();
+    dd($posts);
 
 });
