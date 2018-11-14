@@ -52,11 +52,14 @@ Route::get('/', function () {
 
     //\App\Post::destroy(1,6,8);         //刪除多筆資料
 
-    $allPosts=\App\Post::all();    // 取得Collection
-    dd($allPosts);
-    $featuredPosts=\App\Post::where('is_feature',1)->get();
-    dd($featuredPosts);
+    //$allPosts=\App\Post::all();    // 取得Collection
+    //dd($allPosts);
+    //$featuredPosts=\App\Post::where('is_feature',1)->get();
+    //dd($featuredPosts);
 
-
+    $fourthPost=\App\Post::find(5);    // 取得 Model
+    dd($fourthPost);
+    $lastPost=\App\Post::orderBy('id','DESC')->first();
+    dd($lastPost);
 
 });
