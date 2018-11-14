@@ -40,10 +40,12 @@ Route::get('/', function () {
     //    'content'=>'updated content',
     //]);
 
-    $post=\App\Post::find(2);
-    $post->title='saved title';
-    $post->content='saved content';
-    $post->save();
+    //$post=\App\Post::find(2);      //save方法
+    //$post->title='saved title';
+    //$post->content='saved content';
+    //$post->save();
 
+    $post =\App\Post::find(3);        //delete方法
+    $post ->delete();
 
 });
