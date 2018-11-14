@@ -45,7 +45,10 @@ Route::get('/', function () {
     //$post->content='saved content';
     //$post->save();
 
-    $post =\App\Post::find(3);        //delete方法
-    $post ->delete();
+    //$post =\App\Post::find(3);        //delete方法
+    //$post ->delete();
+
+    \App\Post::destroy(4);     //destroy方法
+
 
 });
