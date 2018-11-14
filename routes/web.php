@@ -31,7 +31,15 @@ Route::get('/', function () {
     //$post=\App\Post::find(1);   //find方法
     //dd($post);
 
-    $posts =\App\Post::where('id','<',10)->orderBy('id','DESC')->get();
-    dd($posts);
+    //$posts =\App\Post::where('id','<',10)->orderBy('id','DESC')->get();
+    //dd($posts);   //條件式
+
+    $post=\App\Post::find(1);     //update方法
+    $post->update([
+        'title'=>'updated title',
+        'content'=>'updated content',
+    ]);
+
+
 
 });
